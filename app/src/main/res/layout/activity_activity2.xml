@@ -1,0 +1,171 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context="com.example.dhananjay.RControl.Activity2">
+ <!--   <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView"
+        android:fillViewport="true"
+        android:scrollbars="vertical"
+        android:layout_alignParentTop="true"> -->
+    <ScrollView android:id="@+id/ScrollView01"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/content">
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="HC-05"
+        android:ems="10"
+        android:id="@+id/device_name" />
+
+    <Button
+        android:text="Connect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/connect_button"
+        android:onClick="onClickConnect" />
+</LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:hint="Message.."
+                android:ems="10"
+                android:id="@+id/message" />
+
+            <Button
+                android:text="Send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/send_message"
+                android:onClick="onClickSend" />
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:maxLines="4"
+        android:scrollbars="vertical"
+        android:fadeScrollbars="false"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show Log"
+        android:id="@+id/toggleLogButton"
+        android:layout_marginLeft="39dp"
+        android:onClick="onClickToggleLogButton"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true" />
+</LinearLayout>
+
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tableLayout"
+        android:layout_below="@+id/toggleLogButton"
+        android:layout_marginTop="5dp"
+        android:layout_alignParentRight="true">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+
+                android:text="Forward"
+                android:id="@+id/forwardButton"
+                android:layout_row="0"
+                android:layout_column="29"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight=".90"/>
+
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:text="Left"
+                android:id="@+id/leftButton"
+                android:layout_row="1"
+                android:layout_column="0"
+                android:layout_weight=".30" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:text="Stop"
+                android:id="@+id/stopButton"
+                android:onClick="onClickStopButton"
+                android:layout_row="1"
+                android:layout_column="29"
+                android:layout_weight=".30"/>
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:text="Right"
+                android:id="@+id/rightButton"
+                android:layout_row="1"
+                android:layout_column="27"
+                android:layout_weight=".30"/>
+
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:text="Reverse"
+                android:layout_column="29"
+                android:id="@+id/reverseButton"
+                android:layout_weight=".80"/>
+
+        </TableRow>
+
+    </TableLayout>
+
+
+</LinearLayout>
+</ScrollView>
+</LinearLayout>
